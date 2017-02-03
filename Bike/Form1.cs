@@ -153,34 +153,7 @@ namespace Bike
                                 if (splitLine.Contains("[HRData]"))
                                 {
 
-                                    averageHeartRate = sumHR;
-                                    averageSpeed = sumSpeed;
-                                    averageAltitude = sumAltitude;
-                                    averagePower = sumPower;
-                                    int counter = 0;
-
-                                    //finds the line number of HRData then reads the rest of the file after that
-                                    for (int a = (i + 1); a < lines.Length; a++)
-                                    {
-                                        //split lines after the title [HRData]
-                                        string splitA = lines[a];
-                                        string[] splitTabs = splitA.Split('\t'); //split tabs
-
-
-                                        //split the catergories
-                                        heartRate = splitTabs[0];
-                                        speed = splitTabs[1];
-                                        cadence = splitTabs[2];
-                                        altitude = splitTabs[3];
-                                        power = splitTabs[4];
-                                        powerBalanceAndPedallingIndex = splitTabs[5];
-
-                                        //covert string array to integers
-                                        convertHR = Convert.ToInt32(splitTabs[0]);
-                                        convertSpeed = Convert.ToInt32(splitTabs[1]);
-                                        convertCadence = Convert.ToInt32(splitTabs[2]);
-                                        convertAltitude = Convert.ToInt32(splitTabs[3]);
-                                        convertPower = Convert.ToInt32(splitTabs[4]);
+                                    
 
 
                                     
