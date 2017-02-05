@@ -166,11 +166,6 @@ namespace Bike
                                         string splitA = lines[a];
                                         string[] splitTabs = splitA.Split('\t'); //split tabs
 
-                                        dt = theStartTime.AddMilliseconds((timeInterval * counter) * 1000);
-
-                                        time = dt.ToString("HH:mm:ss.f");
-                                        double axisTime = (double)new XDate(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond);
-                                        counter++;
 
                                         //split the catergories
                                         heartRate = splitTabs[0];
@@ -187,68 +182,6 @@ namespace Bike
                                         convertAltitude = Convert.ToInt32(splitTabs[3]);
                                         convertPower = Convert.ToInt32(splitTabs[4]);
 
-                                        //sum all of the arrays
-                                        sumHR += (convertHR);
-                                        sumSpeed += (convertSpeed);
-                                        sumAltitude += (convertAltitude);
-                                        sumPower += (convertPower);
-                                        count++;
-
-                                        // Find the min/max values
-                                        //HR
-                                        int maxHeartRate = Int32.Parse(heartRate);
-                                        int minHeartRate = Int32.Parse(heartRate);
-
-                                        if (maxHeartRate > maxhr)
-                                        { maxhr = maxHeartRate; }
-
-                                        if (minHeartRate < minhr)
-                                        { minhr = minHeartRate; }
-
-                                        // speed
-                                        maxSpeed = Int32.Parse(speed);
-                                        if (maxSpeed > maxs)
-                                        { maxs = maxSpeed; }
-
-                                        // power
-                                        int maxPower = Int32.Parse(power);
-                                        if (maxPower > maxp)
-                                        { maxp = maxPower; }
-
-                                        // altitude
-                                        int maxAltitude = Int32.Parse(altitude);
-                                        if (maxAltitude > maxa)
-                                        { maxa = maxAltitude; }
-
-                                        
-                                        
-
-
-
-                                    }
-
-
-
-                                    // Labels
-                                    // HR
-                                    string maxLabel = maxhr.ToString();
-                                    string minLabel = minhr.ToString();
-                                    averageHeartRate = sumHR / count;
-                                    HeartRate.Text = averageHeartRate.ToString("#.##") + " (bpm)";
-                                    maxHR.Text = maxLabel + " (bpm)";
-                                    minHR.Text = minLabel + " (bpm)";
-
-
-
-                                    
-
-                                    // Power
-                                    string maxPowerLabel = maxp.ToString();
-                                    averagePower = sumPower / count;
-                                    AveragePower.Text = averagePower.ToString("#.##") + " (W)";
-                                    MaxPower.Text = maxPowerLabel + " (W)";
-
-                                    
 
                                     
 
