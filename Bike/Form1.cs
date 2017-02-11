@@ -220,9 +220,6 @@ namespace Bike
                                         if (maxAltitude > maxa)
                                         { maxa = maxAltitude; }
 
-                                        // Data Table
-                                        this.dataGridView1.Rows.Add(time, heartRate, speed, cadence, altitude, power, powerBalanceAndPedallingIndex);
-
                                         
                                         
 
