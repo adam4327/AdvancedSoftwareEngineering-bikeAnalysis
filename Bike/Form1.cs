@@ -224,60 +224,7 @@ namespace Bike
                                         this.dataGridView1.Rows.Add(time, heartRate, speed, cadence, altitude, power, powerBalanceAndPedallingIndex);
 
                                         
-                                        // speed
-                                        if (characters[0] == '0')
-                                        {
-                                            this.dataGridView1.Columns[2].Visible = false;
-                                        }
-
-                                        // cadence
-                                        if (characters[1] == '0')
-                                        {
-                                            this.dataGridView1.Columns[3].Visible = false;
-                                        }
                                         
-                                        // Altitude
-                                        if (characters[2] == '0')
-                                        {
-                                            this.dataGridView1.Columns[4].Visible = false;
-                                        }
-
-                                        // Power
-                                        if (characters[3] == '0')
-                                        {
-                                            this.dataGridView1.Columns[5].Visible = false;
-                                        }
-
-                                        /*
-                                        // power Left Right balance
-                                        if (characters[4] == '0')
-                                        {
-                                            this.dataGridView1.Columns[1].Visible = false;
-                                        }*/
-
-                                        // Power pedalling index
-                                        if (characters[5] == '0')
-                                        {
-                                            this.dataGridView1.Columns[6].Visible = false;
-                                        }
-
-                                        // HR/CC data
-                                        if (characters[6] == '0')
-                                        {
-                                            this.dataGridView1.Columns[2].Visible = false;
-                                            this.dataGridView1.Columns[3].Visible = false;
-                                            this.dataGridView1.Columns[4].Visible = false;
-                                            this.dataGridView1.Columns[5].Visible = false;
-                                            this.dataGridView1.Columns[6].Visible = false;
-                                        }
-
-
-                                        /*
-                                        // Air Pressure
-                                        if (characters[8] == '0')
-                                        {
-                                            this.dataGridView1.Columns[1].Visible = false;
-                                        } */
 
 
 
@@ -296,44 +243,7 @@ namespace Bike
 
 
 
-                                    // US unit
-                                    if (characters[7] == '0')
-                                    {
-                                        // Speed
-                                        maxs = maxs / 10;
-                                        maxSpeedLabel = maxs.ToString("#.##");
-                                        averageSpeed = (sumSpeed / count) / 10;
-                                        AverageSpeed.Text = averageSpeed.ToString("#.##") + " (Mph)";
-                                        MaxSpeed.Text = maxSpeedLabel + " (Mph)";
-
-                                        // Total distance
-                                        double totalDistance = (averageSpeed / 3600) * theLength.TotalMilliseconds / 1000; // 60 x 60 (mins and secs)
-                                        TotalDistance.Text = totalDistance.ToString("#.##") + " (Miles)";
-
-                                        // Altitude
-                                        string maxAltitudeLabel = maxa.ToString();
-                                        averageAltitude = sumAltitude / count;
-                                        AverageAltitude.Text = averageAltitude.ToString("#.##");
-                                        MaxAltitude.Text = maxAltitudeLabel;
-                                    }
-                                    else if(characters[7] == '1')
-                                    {
-                                        // Speed
-                                        maxs = (maxs * 1.60934) / 10;
-                                        maxSpeedLabel = maxs.ToString("#.##");
-                                        averageSpeed = (((sumSpeed / count) / 10) * 1.60934);
-                                        AverageSpeed.Text = averageSpeed.ToString("#.##") + " (Kph)";
-                                        MaxSpeed.Text = maxSpeedLabel + " (Kph)";
-
-                                        double totalDistance = (averageSpeed / 3600) * theLength.TotalMilliseconds / 1000; // 60 x 60 (mins and secs)
-                                        TotalDistance.Text = totalDistance.ToString("#.##") + " (Kilometers)";
-
-                                        // Altitude
-                                        string maxAltitudeLabel = maxa.ToString();
-                                        averageAltitude = sumAltitude / count;
-                                        AverageAltitude.Text = averageAltitude.ToString("#.##");
-                                        MaxAltitude.Text = maxAltitudeLabel;
-                                    }
+                                    
 
                                     // Power
                                     string maxPowerLabel = maxp.ToString();
