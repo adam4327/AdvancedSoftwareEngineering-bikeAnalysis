@@ -365,26 +365,6 @@ namespace Bike
             }
         }
 
-        private void milesRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if (maxSpeed > maxs)
-            { maxs = maxSpeed; }
-            maxs = maxs / 10;
-            maxSpeedLabel = maxs.ToString();
-            averageSpeed = ((sumSpeed / count) / 10);
-            AverageSpeed.Text = averageSpeed.ToString("#.##");
-            MaxSpeed.Text = maxSpeedLabel + " (Mph)";
-        }
-
-        private void KilometersRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            // Speed
-            maxs = maxs * 1.60934;
-            maxSpeedLabel = maxs.ToString();
-            averageSpeed = (((sumSpeed / count) / 10) * 1.60934);
-            AverageSpeed.Text = averageSpeed.ToString("#.##");
-            MaxSpeed.Text = maxSpeedLabel + " (Kph)";
-        }
 
 
       
