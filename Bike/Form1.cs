@@ -280,27 +280,7 @@ namespace Bike
                                         } */
 
 
-                                        // Display Lines in Graph
-                                        pane = zedGraphControl1.GraphPane;
-                                        pane.XAxis.Scale.IsVisible = true;
-                                        pane.YAxis.Scale.IsVisible = true;
 
-                                        pane.XAxis.MajorGrid.IsVisible = true;
-                                        pane.YAxis.MajorGrid.IsVisible = true;
-
-
-                                        pane.XAxis.Type = AxisType.Date;
-
-                                        pane.XAxis.Scale.Format = "HH:mm:ss";
-                                        pane.XAxis.Scale.MajorUnit = DateUnit.Minute;
-                                        pane.XAxis.Scale.MinorUnit = DateUnit.Minute;
-
-                                        // Add Intervals and points
-                                        heartRateArray.Add(axisTime, convertHR);
-                                        speedArray.Add(axisTime, convertSpeed);
-                                        altitudeArray.Add(axisTime, convertAltitude);
-                                        powerArray.Add(axisTime, convertPower);
-                                        cadenceArray.Add(axisTime, convertCadence);
                                     }
 
 
@@ -374,38 +354,6 @@ namespace Bike
 
                            
 
-
-
-                            //var pointsCurve;
-
-                            LineItem heartRateCurve = pane.AddCurve("", heartRateArray, Color.Black, SymbolType.Circle);
-                            heartRateCurve.Line.IsVisible = true;
-                            heartRateCurve.Line.Width = 1.0F;
-                            heartRateCurve.Symbol.Size = 0F;
-
-                            LineItem speedCurve = pane.AddCurve("", speedArray, Color.Red, SymbolType.Circle);
-                            speedCurve.Line.IsVisible = true;
-                            speedCurve.Line.Width = 1.0F;
-                            speedCurve.Symbol.Size = 0F;
-
-                            LineItem altitudeCurve = pane.AddCurve("", altitudeArray, Color.Blue, SymbolType.Circle);
-                            altitudeCurve.Line.IsVisible = true;
-                            altitudeCurve.Line.Width = 1.0F;
-                            altitudeCurve.Symbol.Size = 0F;
-
-                            LineItem powerCurve = pane.AddCurve("", powerArray, Color.Green, SymbolType.Circle);
-                            powerCurve.Line.IsVisible = true;
-                            powerCurve.Line.Width = 1.0F;
-                            powerCurve.Symbol.Size = 0F;
-
-                            LineItem cadenceCurve = pane.AddCurve("", cadenceArray, Color.Yellow, SymbolType.Circle);
-                            cadenceCurve.Line.IsVisible = true;
-                            cadenceCurve.Line.Width = 1.0F;
-                            cadenceCurve.Symbol.Size = 0F;
-
-                            pane.AxisChange();
-                            zedGraphControl1.Refresh();
-                            this.Controls.Add(zedGraphControl1);
                         }
                     }
                 }
