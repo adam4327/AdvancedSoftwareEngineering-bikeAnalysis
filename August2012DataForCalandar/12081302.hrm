@@ -1,0 +1,73 @@
+[Params]
+Version=106
+Monitor=34
+SMode=000000000
+Date=20120813
+StartTime=10:02:26.0
+Length=00:00:02.7
+Interval=238
+Upper1=0
+Lower1=0
+Upper2=0
+Lower2=0
+Upper3=180
+Lower3=177
+Timer1=00:00:00.0
+Timer2=00:00:00.0
+Timer3=00:00:00.0
+ActiveLimit=0
+MaxHR=195
+RestHR=46
+StartDelay=590
+VO2max=56
+Weight=66
+
+[Note]
+
+[IntTimes]
+00:00:02.7	65	0	69	69
+0	0	0	0	0	128
+0	0	0	0	0
+0	0	0	190	0	0
+0	0	0	0	0	0
+
+[IntNotes]
+1	
+
+[ExtraData]
+
+[LapNames]
+1	0	
+
+[Summary-123]
+1	0	1	0	0	0
+195	0	0	46
+0	0	0	0	0	0
+195	0	0	46
+0	0	0	0	0	0
+195	0	0	46
+0	1
+
+[Summary-TH]
+1	0	1	0	0	0
+195	0	0	46
+0	1
+
+[HRZones]
+190
+175
+162
+152
+143
+133
+0
+0
+0
+0
+0
+
+[SwapTimes]
+
+[HRData]
+1036
+1112
