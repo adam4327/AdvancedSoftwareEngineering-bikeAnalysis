@@ -1,0 +1,6 @@
+I:\adam\Bike\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+I:\adam\Bike\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+I:\adam\Bike\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+I:\adam\Bike\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+I:\adam\Bike\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+I:\adam\Bike\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
